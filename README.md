@@ -1,4 +1,4 @@
-# 🎶 YouTube Kannada Songs Player
+# 🎶 youtube-playlist-player
 
 A simple web-based music player that plays songs directly from a **YouTube playlist** using the **YouTube IFrame API**.  
 Built with **HTML, CSS, and JavaScript**.
