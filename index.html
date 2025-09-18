@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YouTube Playlist Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <div class="player-app" id="app">
+    <div class="left">
+      <div class="cover" id="cover">
+        <img id="thumbnail" src="" alt="Cover thumbnail" />
+        <div class="title" id="nowTitle">Loading...</div>
+      </div>
+
+      <div id="yt-player" style="height:0; width:0; overflow:hidden;"></div>
+
+      <div class="player-controls">
+        <div class="controls-left">
+          <button class="btn" id="prevBtn" title="Previous">⏮</button>
+          <button class="btn big" id="playBtn" title="Play/Pause">▶️</button>
+          <button class="btn" id="nextBtn" title="Next">⏭</button>
+          <button class="btn" id="shuffleBtn" title="Shuffle">🔀</button>
+          <button class="btn" id="loopBtn" title="Loop">🔁</button>
+        </div>
+
+        <div class="controls-right" style="display:flex; gap:8px; align-items:center;">
+          <label class="small-note" for="vol">Vol</label>
+          <input id="vol" type="range" min="0" max="100" step="1" value="60">
+        </div>
+      </div>
+
+      <div class="progress">
+        <input id="seek" type="range" min="0" max="100" value="0">
+        <div class="times">
+          <div id="curTime">0:00</div>
+          <div id="durTime">0:00</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="playlist-header">
+        <div>
+          <strong>Playlist</strong>
+          <div class="small-note">Tracks will appear here</div>
+        </div>
+        <div>
+          <button class="btn" id="reloadMetadata">Fetch Titles</button>
+        </div>
+      </div>
+
+      <ol class="playlist" id="playlist"></ol>
+
+      <div style="margin-top:auto;">
+        <div class="small-note">Add your YouTube Data API key in <code>script.js</code> to fetch titles/thumbnails.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
